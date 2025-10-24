@@ -1,0 +1,108 @@
+body {
+    margin: 0;
+    background: url('../img/HomeBackground.png') no-repeat center center/cover;
+    background-attachment: fixed;
+    color: white;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+.buttons-trailer {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    justify-content: flex-start; 
+    align-items: center;     
+    margin-top: 30vh;
+    padding-left: 4rem;
+    box-sizing: border-box;
+}
+
+.btn {
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.btn-play {
+    background-color: rgba(226, 19, 19, 0.7);
+    color: rgb(255, 255, 255);
+}
+
+.btn-trailer {
+    background-color: rgba(109, 109, 110, 0.7);
+    color: white;
+}
+
+.carrossel {
+  margin-top: 30px;
+  color: white;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.carrossel h2 {
+  margin-bottom: 10px;
+  padding-left: 4rem; 
+}
+
+.carrossel-container {
+  position: relative; 
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  padding: 0 4rem; 
+  box-sizing: border-box;
+}
+
+.movies {
+  display: flex;
+  gap: 10px;
+  width: 100%; 
+  box-sizing: border-box;
+}
+
+.movies img {
+  width: 200px;
+  min-width: 200px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.movies img:hover {
+    transform: scale(1.05);
+}
+
+.btn-carrossel {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  border: none;
+  font-size: 30px;
+  cursor: pointer;
+  padding: 10px;
+  height: 100px;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.carrossel:hover .btn-carrossel {
+    opacity: 1;
+}
+
+.btn-carrossel.prev {
+  left: 0;
+  border-radius: 0 8px 8px 0;
+}
+
+.btn-carrossel.next {
+  right: 0;
+  border-radius: 8px 0 0 8px;
+}

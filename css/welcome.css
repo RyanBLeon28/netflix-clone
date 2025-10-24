@@ -1,0 +1,29 @@
+body {
+    margin: 0;
+    height: 100vh;
+    background: url('../img/Background.png') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+.welcome-btn {
+    margin-top: 20px;
+    padding: 12px 24px;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 6px;
+    background-color: #e50914;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top:20%;
+}
+
+.welcome-btn:hover {
+    background-color: #f40612;
+}
