@@ -1,6 +1,8 @@
 const carousels = document.querySelectorAll('.carrossel');
 const scrollStep = 200 + 10;
 
+const menuIcon = document.querySelector('.menu-icon');
+
 carousels.forEach(carousel => {
     
     const prevButton = carousel.querySelector('.prev');
@@ -34,3 +36,17 @@ carousels.forEach(carousel => {
         }
     }, 4000); 
 });
+
+function openNav() {
+  document.getElementById("mySidenav").style.width = "100px";
+  document.getElementById("main").style.marginLeft = "250px";
+  menuIcon.style.display = 'none';
+}
+
+/* Set the width of the side navigation to 0 and the left margin of the page content to 0, and the background color of body to white */
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+  document.getElementById("main").style.marginLeft = "0";
+  menuIcon.style.display = 'block';
+  document.body.style.backgroundColor = "white";
+}

@@ -3,18 +3,36 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bem-vindo - Netflix Clone</title>
+  <title>Netflix Clone</title>
   <link rel="stylesheet" href="../css/netflix.css">
 </head>
 <body>
   <h1 class="text">NETFLIX</h1>
+  <audio id="intro-sound" src="../audio/tudum.mp3" preload="auto"></audio>
+  <script>
+    window.addEventListener('load', () => {
+      const audio = document.getElementById('intro-sound');
+      
+      // Tenta tocar o áudio
+      const promise = audio.play();
 
-    <script>
-        
-    // após 2 segundos (tempo da animação), redireciona:
+      if (promise !== undefined) {
+          promise.catch(error => {
+              // Autoplay foi bloqueado pelo navegador.
+              // Isso é comum, mas como o usuário clicou em "Play" na
+              // página anterior, geralmente funciona.
+              console.warn("O autoplay do áudio foi bloqueado.");
+            }).then(() => {
+                // Áudio tocando!
+            });
+        }
+      });
+    
+      // após 2 segundos (tempo da animação), redireciona:
     setTimeout(() => {
+      
         window.location.href = "./home.html";
-    }, 2000);
-</script>
+    }, 3500);
+  </script>
 </body>
 </html>

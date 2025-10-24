@@ -21,7 +21,7 @@ body {
 
 @keyframes growText {
     from {
-        font-size: 1.1rem;
+        font-size: 5.1rem;
     }
     to {
         font-size: 10.1rem;
