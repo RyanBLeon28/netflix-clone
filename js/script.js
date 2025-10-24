@@ -19,6 +19,13 @@ carousels.forEach(carousel => {
         scrollContainer.scrollBy({ left: -scrollStep, behavior: 'smooth' });
     });
 
+    const movieImages = carousel.querySelectorAll('.movies img');
+    movieImages.forEach(image => {
+        image.addEventListener('click', () => {
+            window.location.href = 'netflix.html';
+        })
+    })
+
     setInterval(() => {
         if (scrollContainer.scrollLeft + scrollContainer.clientWidth >= scrollContainer.scrollWidth - 10) {
             scrollContainer.scrollTo({ left: 0, behavior: 'smooth' });
