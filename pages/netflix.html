@@ -13,17 +13,12 @@
     window.addEventListener('load', () => {
       const audio = document.getElementById('intro-sound');
       
-      // Tenta tocar o áudio
       const promise = audio.play();
 
       if (promise !== undefined) {
           promise.catch(error => {
-              // Autoplay foi bloqueado pelo navegador.
-              // Isso é comum, mas como o usuário clicou em "Play" na
-              // página anterior, geralmente funciona.
               console.warn("O autoplay do áudio foi bloqueado.");
             }).then(() => {
-                // Áudio tocando!
             });
         }
       });
