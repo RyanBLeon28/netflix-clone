@@ -49,12 +49,12 @@ body {
   padding-left: 4rem; 
 }
 
+.carrossel-wrapper {
+  position: relative;
+}
+
 .carrossel-container {
-  position: relative; 
-  display: flex;
-  align-items: center;
   overflow: hidden;
-  padding: 0 4rem; 
   box-sizing: border-box;
 }
 
@@ -63,6 +63,7 @@ body {
   gap: 10px;
   width: 100%; 
   box-sizing: border-box;
+  padding: 0 4rem;
 }
 
 .movies img {
